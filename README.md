@@ -9,10 +9,10 @@ Usage
 Logging
 -------
 
-Assuming you have created and configured an Apache log4net config file at ```./Log/config.log```
+Assuming you have created and configured an Apache log4net config file at ```.\Log\config.log```
 
 ```CSharp
-  Logging log = new Logging(Environment.CurrentDirectory + "/Log", "config");
+  Logging log = new Logging(Environment.CurrentDirectory + "\\Log\\", "config");
 ```
 
 This will create a new object that you can use to call log entries to:
