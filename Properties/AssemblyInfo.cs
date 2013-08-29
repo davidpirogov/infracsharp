@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("infracsharp")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("InfraCSharp")]
+[assembly: AssemblyDescription("A C# Infrastructure project that contains basic boilerplate functionality")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
-[assembly: AssemblyProduct("infracsharp")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2013")]
+[assembly: AssemblyCompany("DavidCalculli.com")]
+[assembly: AssemblyProduct("InfraCSharp")]
+[assembly: AssemblyCopyright("Copyright © David Calculli 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
