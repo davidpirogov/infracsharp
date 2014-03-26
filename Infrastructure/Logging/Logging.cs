@@ -70,7 +70,20 @@ namespace InfraCSharp.Infrastructure.Logging
         /// <param name="logConfigurationName">The configuration name of the logger, excluding the '.config' file extension</param>
         public Logging(string logDirectory, string logConfigurationName)
         {
-            this.logFile = new FileInfo(logDirectory + logConfigurationName + ".config");
+            // Check that the log directory exists
+            DirectoryInfo logParentDir = new DirectoryInfo(logDirectory);
+            if (!logParentDir.Exists)
+            {
+                throw new DirectoryNotFoundException("Specified directory does not exist for the configuration file! Directory Could Not Be Found: " + logParentDir.FullName);
+            }
+            
+            // Check that the log file exists
+            this.logFile = new FileInfo(logParentDir.FullName + "\\" + logConfigurationName + ".config");
+            if (!this.logFile.Exists)
+            {
+                throw new FileNotFoundException("Specified configuration file cannot be found.", logFile.FullName);
+            }
+            
             this.baseLogger = LogManager.GetLogger(typeof(Logging));
             this.logName = logConfigurationName;
             InitializeLogger();
